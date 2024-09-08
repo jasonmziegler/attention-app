@@ -10,7 +10,7 @@ function Login() {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await login(email, password);
     if (res.success) {
